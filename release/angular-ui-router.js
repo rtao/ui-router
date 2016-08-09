@@ -3074,7 +3074,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
           throw new Error("Could not resolve '" + to + "' from state '" + options.relative + "'");
         }
       }
-      if (toState[abstractKey]) throw new Error("Cannot transition to abstract state '" + to + "'");
+      // if (toState[abstractKey]) throw new Error("Cannot transition to abstract state '" + to + "'");
       if (options.inherit) toParams = inheritParams($stateParams, toParams || {}, $state.$current, toState);
       if (!toState.params.$$validates(toParams)) return TransitionFailed;
 
